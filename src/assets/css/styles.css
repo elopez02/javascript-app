@@ -1,0 +1,114 @@
+@import './bootstrap-lumen.css';
+
+body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Navbar */
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3359375rem;
+    padding-bottom: 0.3359375rem;
+    margin-right: 1rem;
+    font-size: 1.09375rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Loader */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.table-loading {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2000;
+}
+
+.table-loading .loader {
+    width: 100px;
+    height: 100px;
+    border-bottom: 3px solid #428bca;
+    border-left: 3px solid #428bca;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+}
+
+.table-loading .loader:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    border-bottom: 3px solid #69a8df;
+    border-left: 3px solid #69a8df;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Cards */
+.card-custom {
+    min-height: 85vh;
+    border-width: 3px !important;
+    border-radius: unset;
+}
+
+.card-custom .card-header {
+    border-radius: unset;
+    color: white;
+    z-index: 1;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-custom .card-body h2 {
+    color: #127ba3 !important;
+}
