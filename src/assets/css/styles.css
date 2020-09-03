@@ -97,7 +97,6 @@ textarea {
 
 /* Cards */
 .card-custom {
-    min-height: 85vh;
     border-width: 3px !important;
     border-radius: unset;
 }
@@ -111,4 +110,10 @@ textarea {
 
 .card-custom .card-body h2 {
     color: #127ba3 !important;
+}
+
+.card-custom .card-body {
+    min-height: 80vh;
+    max-height: 80vh;
+    overflow-y: auto;
 }
